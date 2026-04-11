@@ -1,0 +1,112 @@
+/* 遮罩層：模糊背景 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px); /* 磨砂玻璃效果 */
+  z-index: 10000;
+  display: flex;
+  align-items: flex-end; /* 讓內容從底部彈出 */
+}
+
+/* 彈窗主體 */
+.modal-content {
+  width: 100%;
+  max-height: 85vh; /* 最高佔螢幕 85% */
+  background: white;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.modal-handle {
+  width: 40px;
+  height: 5px;
+  background: #ddd;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+}
+
+.modal-title { font-size: 20px; margin: 0; font-weight: 600; text-align: center; }
+.modal-subtitle { font-size: 13px; color: #666; text-align: center; margin-bottom: 20px; }
+
+/* 項目卡片列表 */
+.item-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.item-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+}
+
+.item-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.item-name-input {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  width: 80%;
+  border-bottom: 1px dashed #ccc;
+}
+
+.item-date-input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+/* 底部按鈕 */
+.modal-footer {
+  display: flex;
+  gap: 10px;
+  padding-bottom: env(safe-area-inset-bottom); /* 適應 iPhone 底部橫條 */
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #eee;
+  font-weight: bold;
+}
+
+.btn-confirm {
+  flex: 2;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #28a745; /* 綠色代表存入冰箱 */
+  color: white;
+  font-weight: bold;
+}
