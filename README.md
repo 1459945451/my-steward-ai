@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ##
+```text
 src/
 ├── components/          # 【共通UIコンポーネント】再利用可能なUI部品（モーダル、ナビ等）
 │   ├── ConfirmModal/    # 独立した確認ダイアログ（CSSスタイルを含む）
