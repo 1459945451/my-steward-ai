@@ -128,10 +128,11 @@ if (width > maxWidth || height > maxWidth) {
       reader.onload = async () => {
         const base64Data = reader.result.split(',')[1];
         setProgress(60);
+const apiKey = process.env.REACT_APP_AI_API_KEY;
 
         // Step 3: 調用 Gemini API
         try {
-          const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=AIzaSyDpV6EYkb7KZtTHYy_E7jQtHSwbUq3dIVM";
+          const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key="+apiKey;
           const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
