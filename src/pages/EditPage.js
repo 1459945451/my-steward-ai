@@ -11,11 +11,9 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
   const [foodName, setFoodName] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
 
-const apiKey = process.env.REACT_APP_AI_API_KEY;
-// 測試是否成功讀取（開發完記得刪除）
-console.log("API Key 加載成功:", apiKey);
 
-  const { t } = useTranslation(); 
+
+  const { t } = useTranslation();
 
   // 动作
   const handleSave = () => {
