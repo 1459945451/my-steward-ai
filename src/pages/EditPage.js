@@ -10,9 +10,6 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
   const SUGGESTED_DAYS = { 牛奶: 7, 鸡蛋: 14, 面包: 5, 水果: 4, 蔬菜: 7 };
   const [foodName, setFoodName] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
-
-
-
   const { t } = useTranslation();
 
   // 动作
@@ -31,7 +28,7 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
   return (
     <div style={{ padding: "20px",
     boxSizing: "border-box",
-    overflowX: "hidden",}}>
+    overflowX: "hidden"}}>
       <h2>🍎{t("app_name")} </h2>
       <input
         style={{
@@ -55,7 +52,7 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
         }}
       />
       <input
-        type="text"
+        type="date"
         style={{
           width: "100%", 
           maxWidth: "100%",
@@ -65,6 +62,7 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
           borderRadius: "8px",
           border: "1px solid #ddd",
           boxSizing: "border-box",
+          height: "40px",
         }}
         value={expiryDate}
         onChange={(e) => setExpiryDate(e.target.value)}
