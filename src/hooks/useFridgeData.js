@@ -37,7 +37,7 @@ const handleAddMultipleFoods = (newItems) => {
     // 這樣你在刪除時就有依據，不需要手動管理
     const itemsWithIdentity = newItems.map((item, index) => ({
       ...item,
-      // 使用時間戳 + 循環索引，保證這批數據絕對不會撞車
+     
       id: `${Date.now()}-${index}`
     }));
 
@@ -46,7 +46,6 @@ const handleAddMultipleFoods = (newItems) => {
     return updatedList;
   });
 };
-  
 
   // 4. 封裝刪除功能
   const deleteFood = (id) => {
@@ -128,7 +127,7 @@ if (width > maxWidth || height > maxWidth) {
       reader.onload = async () => {
         const base64Data = reader.result.split(',')[1];
         setProgress(60);
-const apiKey = process.env.REACT_APP_AI_API_KEY;
+      const apiKey = process.env.REACT_APP_AI_API_KEY;
 
         // Step 3: 調用 Gemini API
         try {
