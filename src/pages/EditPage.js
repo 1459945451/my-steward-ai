@@ -29,7 +29,9 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
 
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px",
+    boxSizing: "border-box",
+    overflowX: "hidden",}}>
       <h2>🍎{t("app_name")} </h2>
       <input
         style={{
@@ -53,12 +55,12 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
         }}
       />
       <input
-        type="date"
+        type="text"
         style={{
           width: "100%", 
           maxWidth: "100%",
           minWidth: 0,
-          padding: "15px",
+          padding: "0 12px",
           marginBottom: "20px",
           borderRadius: "8px",
           border: "1px solid #ddd",
