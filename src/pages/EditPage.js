@@ -57,12 +57,17 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
           width: "100%", 
           maxWidth: "100%",
           minWidth: 0,
+          display: "block",
+          WebkitAppearance: "none",
+          appearance: "none",
+          overflow: "hidden",
           padding: "0 12px",
           marginBottom: "20px",
           borderRadius: "8px",
           border: "1px solid #ddd",
           boxSizing: "border-box",
           height: "40px",
+          fontSize: "16px",
         }}
         value={expiryDate}
         onChange={(e) => setExpiryDate(e.target.value)}
