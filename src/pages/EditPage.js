@@ -51,7 +51,19 @@ function EditPage({ onAdd, handleAddMultipleFoods }) {
           }
         }}
       />
+      <label
+        htmlFor="expiry-date"
+        style={{
+          display: "block",
+          marginBottom: "6px",
+          color: "#666",
+          fontSize: "14px",
+        }}
+      >
+        到期日期（年 / 月 / 日）
+      </label>
       <input
+        id="expiry-date"
         type="date"
         style={{
           width: "100%", 
